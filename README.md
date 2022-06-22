@@ -3,6 +3,7 @@
 # sudo -i = become the root users
 sudo hostname maven
 cd /opt
+# install Java JDK 1.8k as a pre-requisite for maven to run
 
 sudo hostname maven
 cd /opt
@@ -19,10 +20,11 @@ sudo unzip apache-maven-3.8.6-bin.zip
 sudo rm -rf apache-maven-3.8.6-bin.zip
 sudo mv apache-maven-3.8.6/ maven
 
-# Step 3. Set Environmental Variable ......... For Specific User
+# Step 3. Set Environmental Variable - For Specific User
 #vi ~/.bash_profile
 echo "export M2_HOME=/opt/maven"  >>  ~/.bash_profile
 echo "export PATH=$PATH:$M2_HOME/bin"   >> ~/.bash_profile
 
+#refresh the .bash_profile file
 source ~/.bash_profile
 mvn -version
